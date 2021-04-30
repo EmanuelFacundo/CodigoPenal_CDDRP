@@ -1,120 +1,133 @@
-import { estelionatoOutros, honra, itensIlegais, liberdadePessoal } from "../../data"
-import { transito, administrativoJ, administrativoP, armas } from "../../data"
-import { militares, municao, patrimonio, pazPublica } from "../../data"
-import { periclitacao, trafico, vestimenta } from "../../data"
+import { data } from "../../data"
 import { useSumContext } from "../Context"
-// import { inputs } from "./actions"
 
 import styles from "./styles.module.scss"
 
 export default function CheckBox(props) {
-  const  {inputs}  = useSumContext()
-  // console.log(inputs)
+  const  { checks }  = useSumContext()
+  const { 
+    vestimenta, 
+    transito,
+    honra,
+    pazPublica,
+    liberdadePessoal,
+    administrativoP,
+    administrativoJ,
+    periclitacao,
+    estelionatoOutros,
+    patrimonio,
+    trafico,
+    armas,
+    municao,
+    itensIlegais,
+    militares
+  } = data
+
   return (
     <div className={styles.categorias}>
       <div className={styles.container}>
         <section className={styles.section}>
           <h2 className={styles.title}>Uso de Vestimenta</h2>
           <div className={styles.checksbox}>
-            {inputs(vestimenta)}
+            {checks(vestimenta)}
           </div>
         </section>
 
         <section className={styles.section}>
           <h2 className={styles.title}>Infrações de Trânsito</h2>
           <div className={styles.checksbox}>
-            {inputs(transito)}
+            {checks(transito)}
           </div>
         </section>
 
         <section className={styles.section}>
           <h2 className={styles.title}>Crimes Contra Honra</h2>
           <div className={styles.checksbox}>
-            {inputs(honra)}
+            {checks(honra)}
           </div>
         </section>
 
         <section className={styles.section}>
           <h2 className={styles.title}>Crimes Contra a Paz Pública</h2>
           <div className={styles.checksbox}>
-            {inputs(pazPublica)}
+            {checks(pazPublica)}
           </div>
         </section>
 
         <section className={styles.section}>
           <h2 className={styles.title}>Crimes Contra Liberdade Pessoal</h2>
           <div className={styles.checksbox}>
-            {inputs(liberdadePessoal)}
+            {checks(liberdadePessoal)}
           </div>
         </section>
 
         <section className={styles.section}>
           <h2 className={styles.title}>Crimes Praticados por Particular Contra a Administração em Geral</h2>
           <div className={styles.checksbox}>
-            {inputs(administrativoP)}
+            {checks(administrativoP)}
           </div>
         </section>
 
         <section className={styles.section}>
           <h2 className={styles.title}>Crimes Contra a Administração da Justiça</h2>
           <div className={styles.checksbox}>
-            {inputs(administrativoJ)}
+            {checks(administrativoJ)}
           </div>
         </section>
 
         <section className={styles.section}>
           <h2 className={styles.title}>Crimes de Periclitação da Vida e da Saúde</h2>
           <div className={styles.checksbox}>
-            {inputs(periclitacao)}
+            {checks(periclitacao)}
           </div>
         </section>
 
         <section className={styles.section}>
           <h2 className={styles.title}>Crime de Estelionato e outras Fraudes</h2>
           <div className={styles.checksbox}>
-            {inputs(estelionatoOutros)}
+            {checks(estelionatoOutros)}
           </div>
         </section>
 
         <section className={styles.section}>
           <h2 className={styles.title}>Crimes Contra o Patrimônio</h2>
           <div className={styles.checksbox}>
-            {inputs(patrimonio)}
+            {checks(patrimonio)}
           </div>
         </section>
 
         <section className={styles.section}>
           <h2 className={styles.title}>Crimes de Tráfico</h2>
           <div className={styles.checksbox}>
-            {inputs(trafico)}
+            {checks(trafico)}
           </div>
         </section>
 
         <section className={styles.section}>
           <h2 className={styles.title}>Crimes Uso Ilegal De Armas</h2>
           <div className={styles.checksbox}>
-            {inputs(armas)}
+            {checks(armas)}
           </div>
         </section>
 
         <section className={styles.section}>
           <h2 className={styles.title}>Crimes de Munição Apreendida</h2>
           <div className={styles.checksbox}>
-            {inputs(municao)}
+            {checks(municao)}
           </div>
         </section>
 
         <section className={styles.section}>
           <h2 className={styles.title}>Crimes Itens Ilegais</h2>
           <div className={styles.checksbox}>
-            {inputs(itensIlegais)}
+            {checks(itensIlegais)}
           </div>
         </section>
 
         <section className={styles.section}>
           <h2 className={styles.title}>Crimes Militares</h2>
           <div className={styles.checksbox}>
-            {inputs(militares)}
+            {checks(militares)}
           </div>
         </section>
       </div>

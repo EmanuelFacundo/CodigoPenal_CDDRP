@@ -1,9 +1,14 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 
 const SumContext = createContext()
 
 export function SumContextProvider(props) {
-  function inputs(crimesList) {
+
+  const { pena, setPena } = useState(0)
+  const { multa, setMulta } = useState(0)
+  const { fianca, setFianca } = useState(0)
+
+  function checks(crimesList) {
     return crimesList.map((List, index) => {
       return (
         <div key={index}>
@@ -20,13 +25,13 @@ export function SumContextProvider(props) {
   }
 
   return (
-    <SumContext.Provider value={{inputs}}>
+    <SumContext.Provider value={{ checks }}>
       {props.children}
     </SumContext.Provider>
   )
 
 }
 
-export function useSumContext(){
+export function useSumContext() {
   return useContext(SumContext)
 }
