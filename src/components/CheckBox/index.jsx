@@ -2,12 +2,14 @@ import { estelionatoOutros, honra, itensIlegais, liberdadePessoal } from "../../
 import { transito, administrativoJ, administrativoP, armas } from "../../data"
 import { militares, municao, patrimonio, pazPublica } from "../../data"
 import { periclitacao, trafico, vestimenta } from "../../data"
-import { inputs } from "./actions"
+import { useSumContext } from "../Context"
+// import { inputs } from "./actions"
 
 import styles from "./styles.module.scss"
 
 export default function CheckBox(props) {
-
+  const  {inputs}  = useSumContext()
+  // console.log(inputs)
   return (
     <div className={styles.categorias}>
       <div className={styles.container}>

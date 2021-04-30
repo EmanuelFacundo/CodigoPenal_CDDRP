@@ -7,7 +7,7 @@ export default function Home() {
       <Head>
         <title>Calculadora Penal | CDD RP</title>
       </Head>
-      <h1>Corpo</h1>
+      <h1></h1>
       <CheckBox />
     </div>
   )
