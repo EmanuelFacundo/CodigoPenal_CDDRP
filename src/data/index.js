@@ -5,15 +5,15 @@ Regex usada para transcrever a base de dados
 */
 
 export const transito = [
-  { pena: "0", multa: "700", fianca: "X", crime: "Direção Perigosa", check: false },
-  { pena: "0", multa: "1000", fianca: "X", crime: "Abandono de veículo pessoal", check: false },
-  { pena: "15", multa: "1500", fianca: "3000", crime: "Abandono de Serviço", check: false },
-  { pena: "0", multa: "900", fianca: "X", crime: "Estacionar em local proibido", check: false },
-  { pena: "0", multa: "1000", fianca: "X", crime: "Excesso de velocidade", check: false },
-  { pena: "10", multa: "5000", fianca: "10000", crime: "Tentativa de fuga com Veículo", check: false },
-  { pena: "0", multa: "500", fianca: "X", crime: "Conduzir sem capacete", check: false },
-  { pena: "0", multa: "500", fianca: "X", crime: "Sinal Vermelho", check: false },
-  { pena: "5", multa: "15000", fianca: "30000", crime: "Poluição Sonora", check: false },
+  { pena: "0", multa: "700", fianca: "X", crime: "Direção Perigosa", desc: "", check: false },
+  { pena: "0", multa: "1000", fianca: "X", crime: "Abandono de veículo pessoal", desc: "", check: false },
+  { pena: "15", multa: "1500", fianca: "3000", crime: "Abandono de Serviço", desc: "", check: false },
+  { pena: "0", multa: "900", fianca: "X", crime: "Estacionar em local proibido", desc: "", check: false },
+  { pena: "0", multa: "1000", fianca: "X", crime: "Excesso de velocidade", desc: "", check: false },
+  { pena: "10", multa: "5000", fianca: "10000", crime: "Tentativa de fuga com Veículo", desc: "", check: false },
+  { pena: "0", multa: "500", fianca: "X", crime: "Conduzir sem capacete", desc: "", check: false },
+  { pena: "0", multa: "500", fianca: "X", crime: "Sinal Vermelho", desc: "", check: false },
+  { pena: "5", multa: "15000", fianca: "30000", crime: "Poluição Sonora", desc: "", check: false },
 ]
 
 export const trafico = [
@@ -92,7 +92,7 @@ export const administrativoJ = [
 
 export const vestimenta = [
   { pena: "10", multa: "5000", fianca: "15000", crime: "Uso de equipamento militar", desc: "(Coldre/Colete)", check: false },
-  { pena: "5", multa: "1500", fianca: "3500", crime: "Máscara", desc: "(Salvo para prevenção do Covid-19(Laudo Médico))", check: false },
+  { pena: "5", multa: "1500", fianca: "3500", crime: "Máscara", desc: "(Salvo para prevenção do Covid-19 com Laudo Médico)", check: false },
 ]
 
 export const armas = [

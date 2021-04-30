@@ -1,6 +1,82 @@
-.categorias{
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+.categorias {
   color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .container {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    align-items: flex-start;
+
+    .section {
+      margin: 1rem;
+      width: 100%;
+      .title {
+        margin: 0;
+        margin-bottom: 5px;
+        font-size: 2rem;
+        font-weight: 400;
+        border-bottom: 3px solid #cf4f00;
+      }
+
+      .checksbox {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        div {
+          margin-right: 2rem;
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+
+          input {
+            display: none;
+          }
+
+          label {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            h4 {
+              font-size: 1.1rem;
+              margin-right: 0.25rem;
+            }
+          }
+
+          input + label:before {
+            content: "";
+            margin-right: 5px;
+            width: 18px;
+            height: 18px;
+            border-radius: 4px;
+            background-color: #fff;
+            border: 1px solid #000;
+            display: inline-block;
+          }
+
+          input:checked + label:before {
+            background-color: #4169e1;
+            border: none;
+            padding: 1px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='23' viewBox='0 0 24 24'%3E%3Cpath d='M0 12.116l2.053-1.897c2.401 1.162 3.924 2.045 6.622 3.969 5.073-5.757 8.426-8.678 14.657-12.555l.668 1.536c-5.139 4.484-8.902 9.479-14.321 19.198-3.343-3.936-5.574-6.446-9.679-10.251z'/%3E%3C/svg%3E");
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .categorias {
+    width: 100vh;
+    .container {
+      width: 100%;
+    }
+  }
 }
