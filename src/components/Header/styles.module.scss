@@ -3,16 +3,20 @@
   src: url("../../../public/HelloMornin.ttf");
 }
 .header {
-  padding: 0 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-  flex-direction: row;
-
+  
   width: 100vh auto;
   height: 125px;
   background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;    
+  }
   .title {
     display: flex;
     flex-direction: column;
@@ -47,6 +51,9 @@
   .header {
     width: 100vh;
 
+    .container {
+      width: 100%;
+    }
     .title {
       h1 {
         margin-left: 100rem auto;
