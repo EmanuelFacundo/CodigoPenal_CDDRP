@@ -1,5 +1,6 @@
 import Head from "next/head";
 import CheckBox from "../components/CheckBox";
+import SumDisplay from "../components/SumDisplay";
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
       <Head>
         <title>Calculadora Penal | CDD RP</title>
       </Head>
-      <h1></h1>
+      <SumDisplay />
       <CheckBox />
     </div>
   )

@@ -4,9 +4,9 @@ const SumContext = createContext()
 
 export function SumContextProvider(props) {
 
-  const { pena, setPena } = useState(0)
-  const { multa, setMulta } = useState(0)
-  const { fianca, setFianca } = useState(0)
+  const [ pena, setPena ] = useState(0)
+  const [ multa, setMulta ] = useState(0)
+  const [ fianca, setFianca ] = useState(0)
 
   function checks(crimesList) {
     return crimesList.map((List, index) => {
@@ -25,7 +25,7 @@ export function SumContextProvider(props) {
   }
 
   return (
-    <SumContext.Provider value={{ checks }}>
+    <SumContext.Provider value={{ checks, pena, multa, fianca }}>
       {props.children}
     </SumContext.Provider>
   )
