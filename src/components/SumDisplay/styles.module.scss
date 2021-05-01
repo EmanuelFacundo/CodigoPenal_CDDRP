@@ -43,7 +43,7 @@
 
         padding: 3px;
 
-        width: 50%;
+        width: 55%;
         height: 1.5rem;
       }
       span{
@@ -57,5 +57,11 @@
       }
       
     }
+  }
+}
+
+@media (min-width: 768px){
+  .box{
+    margin-left: 70%;
   }
 }

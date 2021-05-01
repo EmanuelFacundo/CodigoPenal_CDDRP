@@ -20,18 +20,18 @@ export default function SumDisplay() {
       <div className={styles.contents}>
         <div className={styles.content}>
           <label htmlFor="pena"><h4>Pena: </h4></label>
-          <input type="text" id="pena" value={pena} onClick={() => copyToClipboard(pena, "pena")} readOnly />
-          <span/>
+          <input type="text" id="pena" value={pena === 0 ? "S/Pena" : pena}  readOnly />
+          <span onClick={() => copyToClipboard(pena, "pena")}/>
         </div>
         <div className={styles.content}>
           <label htmlFor="multa"><h4>Multa: </h4></label>
-          <input type="text" id="multa" value={multa} onClick={() => copyToClipboard(multa, "multa")} readOnly />
-          <span/>
+          <input type="text" id="multa" value={multa === 0 ? "S/Multa" : multa} readOnly />
+          <span onClick={() => copyToClipboard(multa, "multa")}/>
         </div>
         <div className={styles.content}>
           <label htmlFor="fianca"><h4>Fiança: </h4></label>
-          <input type="text" id="fianca" value={fianca} onClick={() => copyToClipboard(fianca, "fianca")} readOnly />
-          <span/>
+          <input type="text" id="fianca" value={fianca === 0 ? "S/Fiança" : fianca} readOnly />
+          <span onClick={() => copyToClipboard(fianca, "fianca")}/>
         </div>
       </div>
     </section>
