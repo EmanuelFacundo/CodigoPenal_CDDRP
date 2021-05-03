@@ -28,7 +28,7 @@ export function SumContextProvider(props) {
 
     const penaCrime = parseInt(crime.pena)
     const multaCrime = parseInt(crime.multa)
-    const fiancaCrime = parseInt(crime.multa)
+    const fiancaCrime = parseInt(crime.fianca)
 
     if (!crime.check) {
       crime.check = !crime.check
