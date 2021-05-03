@@ -56,7 +56,7 @@ export function SumContextProvider(props) {
 
       if (pena !== "S/Pena") {
         setPena(pena - penaCrime)
-        if (pena === "0") {
+        if (pena === 0) {
           setPena("S/Pena")
         }
       } else {
@@ -65,7 +65,7 @@ export function SumContextProvider(props) {
 
       if (multa !== "S/Multa") {
         setMulta(multa - multaCrime)
-        if (multa <= 0) {
+        if (multa === 0) {
           setMulta("S/Multa")
         }
       } else {
@@ -74,7 +74,7 @@ export function SumContextProvider(props) {
 
       if (fianca !== "S/Fiança") {
         setFianca(fianca - fiancaCrime)
-        if (fianca <= 0) {
+        if (fianca === 0) {
           setFianca("S/Fiança")
         }
       } else {
