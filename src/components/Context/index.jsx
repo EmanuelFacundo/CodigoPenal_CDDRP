@@ -17,6 +17,8 @@ export function SumContextProvider(props) {
             <h4>{Crime.crime}</h4>
             {Crime.desc !== "" ?
               <h5>| obs: {Crime.desc}</h5> : ""}
+            {Crime.fianca === "X" ?
+              <h5 style={{ color: '#111' }}> : SEM FIANÇA!</h5> : ""}
           </label>
 
         </div>
@@ -28,26 +30,29 @@ export function SumContextProvider(props) {
 
     const penaCrime = parseInt(crime.pena)
     const multaCrime = parseInt(crime.multa)
-    const fiancaCrime = parseInt(crime.fianca)
+    var fiancaCrime = 0
+    if (crime.fianca !== "X") {
+      fiancaCrime = parseInt(crime.fianca)
+    }
 
     if (!crime.check) {
       crime.check = !crime.check
 
       if (pena !== "S/Pena") {
         setPena(pena + penaCrime)
-      } else {
+      } else if (penaCrime !== 0) {
         setPena(penaCrime)
       }
 
       if (multa !== "S/Multa") {
         setMulta(multa + multaCrime)
-      } else {
+      } else if (multaCrime !== 0) {
         setMulta(multaCrime)
       }
 
       if (fianca !== "S/Fiança") {
         setFianca(fianca + fiancaCrime)
-      } else {
+      } else if (fiancaCrime !== 0) {
         setFianca(fiancaCrime)
       }
 
@@ -55,29 +60,32 @@ export function SumContextProvider(props) {
       crime.check = !crime.check
 
       if (pena !== "S/Pena") {
-        setPena(pena - penaCrime)
-        if (pena === 0) {
+        if ((pena - penaCrime) === 0) {
           setPena("S/Pena")
+        } else {
+          setPena(pena - penaCrime)
         }
-      } else {
+      } else if (penaCrime !== 0) {
         setPena(penaCrime)
       }
 
       if (multa !== "S/Multa") {
-        setMulta(multa - multaCrime)
-        if (multa === 0) {
+        if ((multa - multaCrime) === 0) {
           setMulta("S/Multa")
+        } else {
+          setMulta(multa - multaCrime)
         }
-      } else {
+      } else if (multaCrime !== 0) {
         setMulta(multaCrime)
       }
 
       if (fianca !== "S/Fiança") {
-        setFianca(fianca - fiancaCrime)
-        if (fianca === 0) {
+        if ((fianca - fiancaCrime) === 0) {
           setFianca("S/Fiança")
+        } else {
+          setFianca(fianca - fiancaCrime)
         }
-      } else {
+      } else if (fiancaCrime !== 0) {
         setFianca(fiancaCrime)
       }
     }
